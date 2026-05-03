@@ -28,7 +28,7 @@ git-hash <hash> --verbose
 You will see something like this:
 ```console
 > git-hash aaaaaa --verbose
-Subhash to find: aaaaaa
+Hash to find: aaaaaa
 Approximate number of permutations 1048576
 Iteration 130000, compute 12%, elapsed 0 sec, estimated 1 sec.
 Iteration 260000, compute 25%, elapsed 0 sec, estimated 1 sec.
@@ -37,7 +37,13 @@ Commit hash: aaaaaa3ad991376a76b69853969c8414392ba03a
 Author date: 1595131373
 
 You can change commit hash by:
-GIT_COMMITTER_DATE="Thu Apr 22 13:35:45 2021 +0700" git commit --amend --no-edit --date "1595131373"
+GIT_COMMITTER_DATE="1595131400 +0700" git commit --amend --no-edit --date "1595131373 +0700"
 ```
 
 **Note: it is not recommended to specify more than 8 characters.**
+
+## Running tests
+
+```console
+python -m unittest discover -s tests
+```
